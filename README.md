@@ -8,5 +8,7 @@ general conversation like chatting about images based on stable diffusion and hu
 2- Get OpenAI API key and put it in env variable `OPENAI_API_KEY`
 3- run `python main.py`
 
+## TODO:
+publish the used fork of langchain
 
 # example
