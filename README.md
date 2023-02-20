@@ -17,3 +17,6 @@ publish the used fork of langchain
 
 https://user-images.githubusercontent.com/7218339/220134549-1bb94ab8-646e-477d-919d-617b9cb78cb5.mp4
 
+
+# authors
+- @manskx and chatgpt/copilot
