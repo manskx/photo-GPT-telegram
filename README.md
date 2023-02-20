@@ -5,7 +5,9 @@ general conversation like chatting about images based on stable diffusion and hu
 
 ## How to use
 1- create a telegram bot using @BotFather and get the token in env variable `TELEGRAM_BOT_TOKEN`
+
 2- Get OpenAI API key and put it in env variable `OPENAI_API_KEY`
+
 3- run `python main.py`
 
 ## TODO:
