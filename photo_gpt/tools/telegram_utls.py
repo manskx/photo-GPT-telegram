@@ -14,7 +14,7 @@ class TelegramHelper:
             print(e)
             return "Could not send image to user. please make sure the input image_path is correct."
 
-        return f"Image {image_path} has been send to the user."
+        return f"Image '{image_path}' has been sent to the user."
 
     def set_chat_id(self, chat_id):
         """Set chat_id for the model."""

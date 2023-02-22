@@ -1,4 +1,5 @@
 import json
+import logging
 import uuid
 
 
@@ -28,7 +29,7 @@ class Pix2Pix:
         pipe = StableDiffusionInstructPix2PixPipeline.from_pretrained(
             model_id, torch_dtype=torch.float16, safety_checker=None
         )
-        pipe = pipe.to("mps")
+        pipe = pipe.to("mps")  # or cuda or cpu
 
         # Recommended if your computer has < 64 GB of RAM
         pipe.enable_attention_slicing()
@@ -42,7 +43,7 @@ class Pix2Pix:
         image = pipe(
             instruct_text,
             image=original_image,
-            num_inference_steps=40,
+            num_inference_steps=40,  # TODO: make GPT change configure this
             image_guidance_scale=1.2,
         ).images[0]
 
@@ -52,9 +53,9 @@ class Pix2Pix:
 
         image.save(updated_image_path)
 
-        output = f"Style {instruct_text} has been applied to image {image_path} and saved to path: {updated_image_path}\n"
+        output = f"Style '{instruct_text}' has been applied to image '{image_path}' and saved to path: '{updated_image_path}'\n"
 
         output += self.telegram_helper.send_photo_to_user(updated_image_path)
-        print(output)
+        logging.info(output)
 
         return output

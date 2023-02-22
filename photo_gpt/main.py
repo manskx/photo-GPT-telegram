@@ -1,8 +1,7 @@
 import logging
 import uuid
 
-import telegram
-from telegram import Update
+from telegram import Update, Bot
 from telegram.ext import Filters, MessageHandler, CommandHandler, Updater
 
 from photo_gpt.config import TELEGRAM_BOT_TOKEN
@@ -13,7 +12,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
 
-bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
+bot = Bot(token=TELEGRAM_BOT_TOKEN)
 
 telegram_helper = TelegramHelper(bot=bot)
 conv_bot = ConversationBot(telegram_helper)
