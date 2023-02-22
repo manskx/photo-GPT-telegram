@@ -1,9 +1,10 @@
-# image-GPT-telegram
 
-## This is just a demo of using llm (GPT) with to use stable diffusion and huggingface.
+## This is just a demo of using llm (GPT) with use stable diffusion and huggingface.
 ## If you like this project, please give it a star ⭐️ to continue the development.
 
-A telegram bot based on large language models (GPT-3) for image tasks like creating image, captioning, editing and 
+
+# photo-GPT-telegram
+is a telegram bot based on large language models (GPT-3) for image tasks like creating image, captioning, editing and 
 general conversation like chatting about images based on stable diffusion and huggingface and langchain.
 
 ## How to use (tested with macos only)
