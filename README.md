@@ -1,5 +1,5 @@
 
-## This is just a demo of using llm (GPT) with use stable diffusion and huggingface.
+## This is just a demo of using llm (GPT) with stable diffusion and huggingface.
 ## If you like this project, please give it a star ⭐️ to continue the development.
 
 
