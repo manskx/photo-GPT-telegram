@@ -2,4 +2,5 @@ python-telegram-bot==13.1
 transformers
 diffusers[torch]==0.12.1
 openai
+cohere
 git+https://github.com/manskx/langchain.git

@@ -1,7 +1,7 @@
-from langchain_old.agents.initialize import initialize_agent
-from langchain_old.agents.tools import Tool
-from langchain_old.chains.conversation.memory import ConversationBufferMemory
-from langchain_old.llms.openai import OpenAI
+from langchain.agents.initialize import initialize_agent
+from langchain.agents.tools import Tool
+from langchain.chains.conversation.memory import ConversationBufferMemory
+from langchain.llms import OpenAI, Cohere
 from photo_gpt.tools.image_xray import get_image_xray_summary
 from photo_gpt.tools.instruct_pixpix import Pix2Pix
 from photo_gpt.tools.mask_former import MaskFormer
@@ -10,9 +10,13 @@ from photo_gpt.tools.stable_diffusion_inpaint import StableDiffusionInpaint
 
 
 class ConversationBot:
-    def __init__(self, telegram_helper):
+    def __init__(self, telegram_helper, llm="openai"):
         self.telegram_helper = telegram_helper
-        self.llm = OpenAI(temperature=0)
+
+        if llm == "openai":
+            self.llm = OpenAI(temperature=0)
+        elif llm == "cohere":
+            self.llm = Cohere(temperature=0)
 
         self.masker = MaskFormer()
         self.stable_diffusion = StableDiffusion(telegram_helper)

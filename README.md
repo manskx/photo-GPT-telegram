@@ -11,7 +11,7 @@ general conversation like chatting about images based on stable diffusion and hu
 
 1- create a telegram bot using @BotFather and get the token in env variable `TELEGRAM_BOT_TOKEN`
 
-2- Get OpenAI API key and put it in env variable `OPENAI_API_KEY`
+2- Get OpenAI API key and put it in env variable `OPENAI_API_KEY` or Cohere API key and put it in env variable `COHERE_API_KEY`
 
 3- ```bash
    git clone https://github.com/manskx/photo-GPT-telegram.git
